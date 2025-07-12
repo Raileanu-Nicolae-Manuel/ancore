@@ -1,8 +1,8 @@
 {
   "name": "ancore",
-  "version": "0.3.1",
+  "version": "0.0.1",
   "description": "A monorepo template built with Bun, Hono, Vite, and React",
-  "author": "Steve Simkins",
+  "author": "Raileanu Nicolae Manuel",
   "license": "MIT",
   "homepage": "https://github.com/stevedylandev/bhvr",
   "workspaces": [
