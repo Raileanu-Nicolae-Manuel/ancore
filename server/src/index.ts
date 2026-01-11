@@ -1,6 +1,9 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import type { ApiResponse } from "shared/dist";
+import { drizzle } from 'drizzle-orm/libsql';
+
+export const db = drizzle(process.env.DB_FILE_NAME!);
 
 export const app = new Hono()
 
