@@ -1,4 +1,6 @@
 import { defineConfig } from 'vite'
+import tailwindcss from "@tailwindcss/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 import path from 'node:path'
 import electron from 'vite-plugin-electron/simple'
 import react from '@vitejs/plugin-react'
@@ -6,7 +8,9 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    tsconfigPaths(),
     react(),
+    tailwindcss(),
     electron({
       main: {
         // Shortcut of `build.lib.entry`.
@@ -26,4 +30,8 @@ export default defineConfig({
         : {},
     }),
   ],
+  optimizeDeps: {
+    // Prevents Vite from hiding the UI source code from Tailwind
+    exclude: ["@ancore/ui"],
+  },
 })
