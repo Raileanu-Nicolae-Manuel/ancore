@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* 1. Import the shadcn variables/theme from your UI package */
+@import "@ancore/ui/globals.css";
+
+@source "../../../packages/ui/src/**/*.{ts,tsx}";
