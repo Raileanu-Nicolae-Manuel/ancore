@@ -17,3 +17,10 @@ sequenceDiagram
     User->>Target: 5. Request
     Target-->>User: 6. Response
 ```
+
+## 2. Steps Review this in the future
+
+- [ ] Simple login set-up better auth
+  - [ ] Login to the auth server
+  - [ ] He auth server provides privileges to access the chat/voice server
+- [ ] The Manual Discovery
