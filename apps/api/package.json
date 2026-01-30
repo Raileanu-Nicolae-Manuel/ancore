@@ -1,0 +1,46 @@
+{
+  "name": "@ancore/api",
+  "type": "module",
+  "version": "0.0.0",
+  "exports":{
+    "./routes": "./src/routes/index.ts",
+    "./schema": "./src/db/schema/index.ts",
+    "./app": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "typecheck": "tsc --noEmit",
+    "update-http-statuses": "esno scripts/update-http-statuses.ts",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.9",
+    "@hono/zod-openapi": "^1.2.0",
+    "@scalar/hono-api-reference": "^0.9.37",
+    "better-auth": "^1.4.17",
+    "dotenv": "^17.2.3",
+    "dotenv-expand": "^12.0.3",
+    "drizzle-orm": "^0.45.1",
+    "hono": "^4.11.6",
+    "pg": "^8.17.2",
+    "stoker": "^2.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.2.0",
+    "@types/node": "^20.11.17",
+    "@types/pg": "^8.16.0",
+    "drizzle-kit": "^0.31.8",
+    "esno": "^4.8.0",
+    "ts-morph": "^27.0.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3"
+  }
+}
