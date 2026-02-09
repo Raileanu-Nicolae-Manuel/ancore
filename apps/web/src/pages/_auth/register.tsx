@@ -28,7 +28,9 @@ export default function RegisterPage() {
         email,
         password,
         name,
-      });
+        callbackURL: "/dashboard",
+      },
+    );
     } catch (error) {
       console.error("Sign up failed:", error);
     } finally {

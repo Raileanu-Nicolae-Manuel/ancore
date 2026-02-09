@@ -15,6 +15,7 @@ export default function LoginPage() {
     signIn.email({
       email,
       password,
+      callbackURL: "/dashboard",
     });
   };
 

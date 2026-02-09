@@ -8,3 +8,5 @@
 - [ ] Setup [excalidraw](https://github.com/excalidraw/excalidraw)
 - [ ] Setup board for collaboration
 - [ ] Github integration
+
+- [ ] gpu-screen-recorder for wayland (echo $XDG_SESSION_TYPE) need this for screen recorder / stream
